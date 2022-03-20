@@ -1,0 +1,152 @@
+.carousel-item > img {
+  object-fit: cover;
+  /* width: 483px; */
+  height: 537px;
+  z-index: 0;
+}
+.height {
+  width: 100%;
+  height: 500px;
+}
+.carousel-item {
+  min-height: 300px;
+}
+.carousel-caption {
+  display: block;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+.carousel-caption-2 {
+  display: block;
+  padding: 0 20px;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+.second-slide {
+  bottom: 100px;
+  left: 600px;
+}
+.carousel-caption .h1 {
+  width: 100%;
+  color: #23abe1;
+  text-align: right;
+}
+.carousel-caption-2 .h1 {
+  width: 100%;
+  color: #23abe1;
+  text-align: right;
+}
+.carousel-caption p {
+  font-size: 18px;
+  margin: auto;
+  width: 60%;
+  line-height: 1.6;
+}
+
+.carousel-caption-2 a {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #fff;
+  background-color: #23abe1;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+.carousel-caption a {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #fff;
+  background-color: #23abe1;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+.w-100 {
+  height: 100vh;
+}
+@media screen and (max-width: 1027px) {
+  .carousel-item > img {
+    object-fit: cover;
+    z-index: 0;
+  }
+  .height {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-caption {
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+  }
+  .carousel-caption-2 {
+    display: block;
+
+    width: auto;
+    position: absolute;
+    top: 60%;
+    right: 40%;
+  }
+  .h1 {
+    color: #23abe1;
+  }
+  .carousel-caption p {
+    font-size: 12px;
+    margin: auto;
+    width: 60%;
+    line-height: 1.6;
+  }
+  .carousel-caption a {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    background-color: #23abe1;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+}
+
+.carousel .item {
+  height: 300px;
+}
+
+.item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+
+@media screen and (max-width: 475px) {
+  .carousel-item > img {
+    object-fit: cover;
+    z-index: 0;
+  }
+  .height {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-caption {
+    /* display: block; */
+    width: 100%;
+    top: 40%;
+    left: 10%;
+  }
+  .carousel-caption-2 {
+    /* display: block; */
+    width: auto;
+    top: 40%;
+    right: 30%;
+  }
+  .carousel-caption h1 {
+    color: #282928;
+  }
+
+  .h1 {
+    /* font-size: 25px; */
+  }
+}

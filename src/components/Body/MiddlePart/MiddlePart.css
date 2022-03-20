@@ -1,0 +1,49 @@
+.icon {
+  display: inline-block;
+  /* border-radius: 999px; */
+  padding: 20px 30px;
+
+  color: skyblue;
+}
+
+@media screen and (max-width: 1027px) {
+  .icon {
+    display: inline-block;
+    /* border-radius: 999px; */
+    padding: 10px 10px;
+
+    color: skyblue;
+  }
+}
+
+.fas {
+  font-size: 45px;
+  margin: 0 auto;
+  color: #23abe1;
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+.icon-item p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.667em;
+}
+
+.icon-item h2 {
+  font-weight: 700;
+  font-family: "work-sans";
+  /* font-size: px; */
+  /* font-weight: bolder; */
+}
+
+.sevc::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 40px;
+  height: 3px;
+  background-color: #23abe1;
+}
