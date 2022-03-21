@@ -4,6 +4,7 @@ import './App.css';
 import About from './components/Body/About/About';
 import Appointment from './components/Body/Appointment/Appointment';
 import Blog from './components/Body/Blog/Blog';
+import Doctors from './components/Body/Doctors/Doctors';
 import MiddlePoster from './components/Body/MiddlePoster/MiddlePoster';
 import Package from './components/Body/Package/Package';
 import Services from './components/Body/Services/Services';
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route  path="/middlePoster">
             <MiddlePoster />
+          </Route>
+          <Route path="/doctors">
+            <Doctors />
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>

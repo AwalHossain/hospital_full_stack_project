@@ -1,0 +1,30 @@
+.card {
+  width: 258px;
+}
+
+.docImg {
+  width: 100%;
+  height: auto;
+}
+
+.docBg {
+  background-color: rgba(240, 234, 234, 0.623);
+}
+
+.docTitle {
+  color: #23abe1;
+  font-weight: 600;
+}
+.docMainTitle {
+  color: #23abe1;
+  font-weight: 700;
+  text-align: center;
+}
+.docName {
+  color: #0c3849;
+  font-weight: 600;
+}
+
+.iconImg {
+  width: 25px;
+}
