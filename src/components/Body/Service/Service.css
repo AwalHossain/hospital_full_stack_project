@@ -1,25 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-body {
-  font-family: "Work Sans", sans-serif;
+.bookBtn {
+  background: #23abe1;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
 }
-.card {
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-}
-.card:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-}
-.title {
-  font-size: 25px;
-  line-height: 1.1em;
-  color: #32325d;
-  margin-bottom: 0.2em;
+
+.bookTitle {
+  color: #23abe1;
 }

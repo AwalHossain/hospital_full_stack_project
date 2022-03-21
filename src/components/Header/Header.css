@@ -1,5 +1,10 @@
 .navbar {
-  background: rgba(33, 46, 2, 0.9) !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.nav {
+  background-color: rgb(115, 255, 0) !important ;
 }
 
 .navbar-nav {

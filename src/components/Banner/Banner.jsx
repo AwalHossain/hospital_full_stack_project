@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Banner.css";
 const Banner = () => {
   return (
@@ -72,31 +71,7 @@ const Banner = () => {
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img
-              className="slide-img"
-              src="https://727512.smushcdn.com/1881491/wp-content/uploads/2016/11/image-1.jpg?lossy=1&strip=1&webp=1"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-block d-md-block">
-              <h5 className="animated-left" style={{ animationDelay: "1s" }}>
-                Hi, I’m Jacqueline <br />{" "}
-                <span className="fs-3">Your Health Advisor</span>
-              </h5>
-              <p
-                className="animated fadeInLeft "
-                style={{ animationDelay: "2s" }}
-              >
-                Health Coach provides world-class health,
-                <br /> Yoga, fitness & nutrition certification programs to
-                world-class professionals. .
-              </p>
-              <p className="animated zoomIn" style={{ animationDelay: "2s" }}>
-                <Link to="/appointment">More Info</Link>
-              </p>
-            </div>
-          </div>
+
         </div>
         <button
           class="carousel-control-prev"
