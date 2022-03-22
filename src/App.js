@@ -20,6 +20,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Review from './components/Review/Review';
 import UserDashboard from './components/UserDashboard/UserDashboard';
 import AuthProvider from './contex/AuthProvider';
 
@@ -58,6 +59,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/userDashboard">
             <UserDashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/review">
+            <Review />
           </PrivateRoute>
           <PrivateRoute path="/blog">
           <Blog></Blog>

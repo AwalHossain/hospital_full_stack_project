@@ -7,6 +7,7 @@ import MiddlePoster from "../Body/MiddlePoster/MiddlePoster";
 import Package from "../Body/Package/Package";
 import Services from "../Body/Services/Services";
 import Navbar from "../Header/Navbar";
+import ShowReview from "../Review/ShowReview";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <MiddlePart></MiddlePart>
       <MiddlePoster></MiddlePoster>
       <Package></Package>
+      <ShowReview></ShowReview>
     </div>
   );
 };

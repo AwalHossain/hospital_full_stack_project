@@ -4,7 +4,7 @@ import useAuth from '../../../Hooks/useAuth';
 import './Appointment.css';
 const Appointment = () => {
   const [number, setNumber] = useState("");
-  const [time, setTime] = useState("");
+  const [timee, setTime] = useState("");
   // const [cost, setCost] = useState("");
   const [date, setDate] = useState("");
   const [file, setFile] =useState([]);
@@ -26,6 +26,8 @@ const Appointment = () => {
   const displayName = user.displayName;
   const cost = file.cost>100 ? file?.cost - file?.cost * 0.25 : file.cost;
   const serviceId = file._id;
+  const title = file.title;
+  const time = file.time;
 
   const handleSubmit = (e) => {
 
@@ -40,6 +42,8 @@ const Appointment = () => {
       date,
       confirm,
       number,
+      title,
+      time
       // service,
     };
     const appointment = {

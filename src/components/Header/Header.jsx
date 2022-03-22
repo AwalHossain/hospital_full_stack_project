@@ -36,7 +36,7 @@ const Header = () => {
                             <Link className="nav-link text-black text-capitalize"  to="/blog">Blog</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link  text-capitalize"  to="/package">Plan</Link>
+                            <Link className="nav-link  text-capitalize"  to="/review">Review</Link>
                             </li>
                             <li className="nav-item">
                             <Link className="nav-link  text-capitalize" to="/services">Services</Link>
