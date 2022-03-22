@@ -1,12 +1,12 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 //Custom hook form json data
 const useServiceces = () => {
     const [info, setInfo] =useState([]);
     // Fetching api from github page
     useEffect(()=>{
-        fetch('https://awalhossain.github.io/host-file/service.json')
+        fetch('http://localhost:5000/api/getAllServices')
         .then(resp => resp.json())
-        .then(data => setInfo(data))
+        .then(data => setInfo(data.service))
     },[])
     return [info, setInfo]
 };

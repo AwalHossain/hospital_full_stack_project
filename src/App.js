@@ -1,5 +1,9 @@
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Dashboard } from './AdminPanel/pages/Dashboard';
+import EditData from './AdminPanel/pages/EditData';
+import { Profile } from './AdminPanel/pages/Profile';
+import { Tables } from './AdminPanel/pages/Tables';
 import './App.css';
 import About from './components/Body/About/About';
 import Appointment from './components/Body/Appointment/Appointment';
@@ -24,6 +28,7 @@ function App() {
      {/* Cotext Api & React router used here */}
       <AuthProvider>
       <BrowserRouter>
+
       <Header></Header>
         <Switch>
           <Route exact path="/">
@@ -31,6 +36,18 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/admin/dashboard">
+            <Dashboard />
+          </Route>
+          <Route exact path="/admin/tables">
+          <Tables />
+          </Route>
+          <Route exact path="/admin/profile">
+          <Profile />
+          </Route>
+          <Route exact path="/admin/edit/:id">
+          <EditData />
           </Route>
           <PrivateRoute path="/appointment">
             <Appointment></Appointment>

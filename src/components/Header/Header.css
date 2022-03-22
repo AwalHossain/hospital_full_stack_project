@@ -1,10 +1,26 @@
 .navbar {
-  background-color: white !important;
-  color: black !important;
+  background-color: #fff !important;
+  /* color: rgb(201, 17, 17) !important; */
 }
-
-.nav {
-  background-color: rgb(115, 255, 0) !important ;
+.navbar-brand svg {
+  color: #1a55ad;
+}
+.logo {
+  color: #13404f;
+  font-size: 25px;
+}
+.logo-1 {
+  color: #1cacbd;
+  font-size: 25px;
+  font-weight: 500;
+}
+.nav-link {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #13404f !important;
+}
+li {
+  color: #da1b1b !important;
 }
 
 .navbar-nav {
