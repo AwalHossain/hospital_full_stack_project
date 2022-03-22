@@ -34,7 +34,7 @@
   padding: 0;
 }
 #ft-form html {
-  font-family: "Work Sans", sans-serif, -apple-system, BlinkMacSystemFont,
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
@@ -81,6 +81,7 @@
 #ft-form [type="email"],
 #ft-form [type="tel"],
 #ft-form [type="text"],
+#ft-form [type="number"],
 #ft-form select,
 #ft-form textarea {
   -webkit-appearance: none;

@@ -24,7 +24,7 @@ const Details = () => {
             <div className="card-body">
                 <h5 className="card-title">{file?.title}</h5>
                 <p className="card-text">{file?.desc}</p>
-                <Link className="btn btn-primary" to="/appointment">Make an Appointment</Link>
+                <Link className="btn btn-primary" to={`/appointment/${file._id}`}>Make an Appointment</Link>
             </div>
             </div>
         </div>
