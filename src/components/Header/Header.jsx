@@ -30,7 +30,7 @@ const Header = () => {
                             <Link className="nav-link text-black text-capitalize"  to="/home">Home</Link>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link text-black text-capitalize"  to="/appointment">Appointment</Link>
+                            <Link className="nav-link text-black text-capitalize"  to="/userDashboard">Dashboard</Link>
                             </li>
                             <li className="nav-item">
                             <Link className="nav-link text-black text-capitalize"  to="/blog">Blog</Link>

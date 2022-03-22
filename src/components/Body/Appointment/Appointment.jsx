@@ -39,7 +39,6 @@ const Appointment = () => {
       displayName,
       date,
       confirm,
-      time,
       number,
       // service,
     };
@@ -50,7 +49,24 @@ const Appointment = () => {
       serviceId
     };
 
-    console.log( appointment);
+    fetch("http://localhost:5000/api/createAppointment", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(appointment),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success) {
+          alert("Appointment added");
+          console.log( data);
+          setLoading(false);
+        }
+      })
+
+
 
   };
     return (
@@ -90,7 +106,7 @@ const Appointment = () => {
 
             <div class="two-cols">
               <label>
-                Datum
+                Date
                 <input
                   onBlur={(e) => setDate(e.target.value)}
                   type="date"
@@ -100,7 +116,7 @@ const Appointment = () => {
               </label>
 
               <div class="inline">
-                <label>
+                {/* <label>
                   <input
                     onBlur={(e) => setTime(e.target.value)}
                     type="hidden"
@@ -114,8 +130,8 @@ const Appointment = () => {
                     value="Monrning"
                   />
                   Morning
-                </label>
-                <label>
+                </label> */}
+                {/* <label>
                   <input
                     onBlur={(e) => setTime(e.target.value)}
                     type="hidden"
@@ -129,7 +145,7 @@ const Appointment = () => {
                     value="afternoon"
                   />
                   Afternoon
-                </label>
+                </label> */}
               </div>
             </div>
             <p>Confirmation requested by</p>
