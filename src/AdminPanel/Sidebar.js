@@ -51,7 +51,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem
                 icon="table"
               >
-                tables
+                Services
               </CDBSidebarMenuItem>
             </Link>
             <Link
@@ -62,7 +62,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem
                 icon="user"
               >
-                profile
+                All Review
               </CDBSidebarMenuItem>
             </Link>
             <Link

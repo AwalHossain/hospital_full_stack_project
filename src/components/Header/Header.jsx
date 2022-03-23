@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth.js';
 import './Header.css';
@@ -6,7 +6,12 @@ const Header = () => {
     const {user, logOut} = useAuth();
     const [fix, setFix] = useState(false);
 
- 
+    const [admin, setAdmin] = useState([])
+    useEffect(()=>{
+        fetch(`https://sleepy-peak-11374.herokuapp.com/api/getAdmin/${user.email}`)
+        .then(res=> res.json())
+        .then(data => setAdmin(data.isAdmin[0]))
+    },[user.email])
 
       console.log(fix);
     return (
@@ -44,9 +49,11 @@ const Header = () => {
                             <li className="nav-item">
                             <Link className="nav-link text-capitalize"  to="/about">About</Link>
                             </li>
-                            <li className="nav-item">
-                            <Link className="nav-link text-capitalize"  to="/admin/dashboard">Admin</Link>
-                            </li>
+                              {
+                                admin ?                             <li className="nav-item">
+                                <Link className="nav-link text-capitalize"  to="/admin/dashboard">Admin</Link>
+                                </li> : ""
+                              }
                             <li className="nav-link text-capitalize" >{
                               user?.email?  <button onClick={logOut} className="px-5 fs-5 py-1"><Link to="/login">LogOut</Link><li>{user.displayName}</li></button> :
                               <Link  to="/login">                            <button className="px-5 fs-5 py-1 lowercase nav-link text-capitalize">Login</button></Link>

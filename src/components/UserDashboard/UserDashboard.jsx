@@ -9,7 +9,7 @@ const UserDashboard = () => {
     const email = user?.email
   
     useEffect(() => {
-      fetch(`http://localhost:5000/api/getServicId/${email}`)
+      fetch(`https://sleepy-peak-11374.herokuapp.com/api/getServicId/${email}`)
         .then((res) => res.json())
         .then((data) => setFile(data.appointmenId));
         
@@ -19,16 +19,13 @@ const UserDashboard = () => {
 
 
     console.log(file)
-    // file.map(dt => fetch(`http://localhost:5000/api/service/${dt}`)
-    // .then((res) => res.json())
-    // .then((data) =>setData(data)))
   
     const handleDelete = (id)=>{
       console.log(id);
-      fetch(`http://localhost:5000/api/deleteAppointment/${id}`,{
+      fetch(`https://sleepy-peak-11374.herokuapp.com/api/deleteAppointment/${id}`,{
         method: "delete",
         headers: {
-          "content-type": "application/json",
+          "content-type":"application/json",
         }
       })
       .then((res) => res.json())

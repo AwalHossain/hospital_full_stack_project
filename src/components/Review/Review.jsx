@@ -20,7 +20,7 @@ const Review = () => {
       setInfo(data);
       const total = {...data, name, email }
       // trackPromise(
-        fetch("http://localhost:5000/api/review", {
+        fetch("https://sleepy-peak-11374.herokuapp.com/api/review", {
           method: "POST",
           headers: {
             "content-type": "application/json",

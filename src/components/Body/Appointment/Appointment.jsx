@@ -17,7 +17,7 @@ const Appointment = () => {
 
   // useEffect for loading service
   useEffect(()=>{
-    fetch(`http://localhost:5000/api/service/${id}`)
+    fetch(`https://sleepy-peak-11374.herokuapp.com/api/service/${id}`)
     .then(res => res.json())
     .then(data => setFile(data.service))
 },[id])
@@ -53,7 +53,7 @@ const Appointment = () => {
       serviceId
     };
 
-    fetch("http://localhost:5000/api/createAppointment", {
+    fetch("https://sleepy-peak-11374.herokuapp.com/api/createAppointment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -179,14 +179,12 @@ const Appointment = () => {
               Cost
             </label>
 
-            {file.cost>100 ? 
+            {file.cost>25000 ? 
             <input value={file?.cost - file?.cost * 0.25}  type="text" name="cost" class="form-control" required />
-            :<input value={file?.cost }  type="text" name="cost" class="form-control" required />
-}
+            :<input value={file?.cost }  type="text" name="cost" class="form-control" required />}
 {file.cost > 100 ? <p>Your got discounted price </p> : <p>Sorry, You are not eligble for discount</p>} 
             </div>
           </fieldset>
-
             <div class="btns">
               <input type="submit" value="Submit request" />
             </div>

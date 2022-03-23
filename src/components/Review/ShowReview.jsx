@@ -8,7 +8,7 @@ const ShowReview = () => {
 
     useEffect(() => {
         // trackPromise(
-          fetch("http://localhost:5000/api/getReview/")
+          fetch("https://sleepy-peak-11374.herokuapp.com/api/getReview/")
             .then((res) => res.json())
             .then((result) => setReview(result.review))
         // );

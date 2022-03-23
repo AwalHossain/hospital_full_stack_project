@@ -19,7 +19,7 @@ const EditData = () => {
     //   Get the Data 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/api/service/${id}`)
+        fetch(`https://sleepy-peak-11374.herokuapp.com/api/service/${id}`)
         .then(res => res.json())
         .then(data => setFile(data.service))
     },[id])
@@ -30,7 +30,7 @@ const EditData = () => {
       console.log(data);
       setInfo(data);
       // trackPromise(
-        fetch(`http://localhost:5000/api/editService/${id}`, {
+        fetch(`https://sleepy-peak-11374.herokuapp.com/api/editService/${id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

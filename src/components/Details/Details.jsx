@@ -7,7 +7,7 @@ const Details = () => {
     const [file, setFile] =useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/api/service/${serviceId}`)
+        fetch(`https://sleepy-peak-11374.herokuapp.com/api/service/${serviceId}`)
         .then(res => res.json())
         .then(data => setFile(data.service))
     },[serviceId])

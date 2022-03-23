@@ -1,11 +1,13 @@
-import {  getAuth, updateProfile } from '@firebase/auth';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import Location from '../../../Hooks/Location';
-import useAuth from '../../../Hooks/useAuth'
+import useAuth from '../../../Hooks/useAuth';
 const Register = () => {
-    const auth = getAuth();
+
+const {registerUser, isLoading} = useAuth();
+
+    // const auth = getAuth();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
@@ -22,25 +24,12 @@ const Register = () => {
     }
 
         // Registration with email, password & name
-        const { register} = useAuth();
+        // const { register} = useAuth();
     const handleRegistration=(e)=>{
         e.preventDefault();
-        register(email, password)
-        .then(async(result) => {
-           
-            // Signed in 
-            await setUserName();
-            history.push(path)
-            window.location.reload()
-           
-            // ...
-          })
-          .catch(error=> alert(error.message))
+        registerUser(email, password, name, history)
+            
     }
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-          .then(result => { })
-      }
 
 
 

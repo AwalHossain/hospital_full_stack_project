@@ -19,7 +19,7 @@ export const Dashboard = () => {
     console.log(data);
     setInfo(data);
     // trackPromise(
-      fetch("http://localhost:5000/api/createService", {
+      fetch("https://sleepy-peak-11374.herokuapp.com/api/createService", {
         method: "POST",
         headers: {
           "content-type": "application/json",

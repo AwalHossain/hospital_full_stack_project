@@ -6,10 +6,31 @@ import Sidebar from "../Sidebar";
 export const Tables = () => {
   const [info, setInfo] =useState([]);
       useEffect(()=>{
-        fetch('http://localhost:5000/api/getAllServices')
+        fetch('https://sleepy-peak-11374.herokuapp.com/api/getAllServices')
         .then(resp => resp.json())
         .then(data => setInfo(data.service))
-    },[])
+    },[info])
+
+    // Delete item
+    const handleDelete =(id)=>{
+
+      fetch(`https://sleepy-peak-11374.herokuapp.com/api/deleteService/${id}`,
+ {
+        method: "delete",
+        headers: {
+          "content-type":"application/json",
+        }
+      }
+      )
+      .then(res=> res.json())
+      .then(data => {
+        if(data.success === true){
+          alert("Deleted successfulle")
+        }
+      }
+        )
+    }
+
   return (
     <div className="d-flex">
       <div>
@@ -33,7 +54,8 @@ export const Tables = () => {
                         <th>#</th>
                         <th>Surger Name</th>
                         <th>Description</th>
-                        <th>Other</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                       </tr>
                     </CDBTableHeader>
                     <CDBTableBody>
@@ -45,6 +67,9 @@ export const Tables = () => {
                         <td>{data.desc}.slice(0, 50)</td>
                         <td>
                           <Link to={`edit/${data._id}`}>Edit</Link>
+                          </td>
+                        <td>
+                          <button onClick={()=>handleDelete(data._id)}>Delete</button>
                           </td>
                       </tr>
                       <tr>

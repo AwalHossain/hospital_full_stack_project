@@ -23,6 +23,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Review from './components/Review/Review';
 import UserDashboard from './components/UserDashboard/UserDashboard';
 import AuthProvider from './contex/AuthProvider';
+import AdminRoute from './Private/AdminRoute/AdminRoute';
 
 function App() {
   return (
@@ -39,15 +40,15 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/admin/dashboard">
+          <AdminRoute path="/admin/dashboard">
             <Dashboard />
-          </Route>
-          <Route exact path="/admin/tables">
+          </AdminRoute>
+          <AdminRoute exact path="/admin/tables">
           <Tables />
-          </Route>
-          <Route exact path="/admin/profile">
+          </AdminRoute>
+          <AdminRoute exact path="/admin/profile">
           <Profile />
-          </Route>
+          </AdminRoute>
           <Route exact path="/admin/edit/:id">
           <EditData />
           </Route>

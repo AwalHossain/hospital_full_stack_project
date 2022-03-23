@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Service.css';
+
 const Service = (props) => {
+
     const {title, desc, id, time, available, _id} =props.data;
     console.log(title);
+
+
+
+
+
+
+
+
+
     return (
         // Card Details
             <div>
