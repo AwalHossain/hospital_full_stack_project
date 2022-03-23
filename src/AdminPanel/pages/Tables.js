@@ -6,12 +6,12 @@ import Sidebar from "../Sidebar";
 export const Tables = () => {
   const [info, setInfo] =useState([]);
       useEffect(()=>{
-        fetch('https://sleepy-peak-11374.herokuapp.com/api/getAllServices')
+        fetch('https://sleepy-peak-11374.herokuapp.com/api/getAll')
         .then(resp => resp.json())
         .then(data => setInfo(data.service))
     },[info])
 
-    // Delete item
+    // Delete item one
     const handleDelete =(id)=>{
 
       fetch(`https://sleepy-peak-11374.herokuapp.com/api/deleteService/${id}`,

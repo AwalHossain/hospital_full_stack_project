@@ -35,7 +35,7 @@ const Login = () => {
     const handleGoogleLog =()=>{
         signInWithGoogle()
         .then(result =>{
-
+            console.log(result.user.displayName,result.user.email );
             history.push(path)
         })
         .catch(error=>{

@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuth from "../Firebase/firebase.init";
 
@@ -9,6 +9,12 @@ const useFirebase = () => {
     const [isLoading, setLoading] = useState(true);
     const [admin, setAdmin] = useState("");
     const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
+    const signInWithGoogle = () => {
+      return signInWithPopup(auth, googleProvider).finally(() =>
+        setLoading(false)
+      );
+    };
     const registerUser = (email, password, name, history) => {
       setLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
@@ -103,6 +109,15 @@ const useFirebase = () => {
           // https://firebase.google.com/docs/reference/js/firebase.User
           console.log(user);
           setUser(user);
+          const data = {email:user.email, displayName:user.email}
+         fetch("https://sleepy-peak-11374.herokuapp.com/api/registerUser", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }).then(res=> res.json())
+        .then(dt => console.log(dt))
           // ...
         } else {
           // User is signed out
@@ -116,6 +131,7 @@ const useFirebase = () => {
   
     return {
       registerUser,
+      signInWithGoogle,
       signInUser,
       user,
       admin,
